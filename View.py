@@ -22,12 +22,6 @@ class GraphicalView:
 
         self.model = model
         
-        import os
-        try:
-            os.environ["DISPLAY"]
-        except:
-            os.environ["SDL_VIDEODRIVER"] = "dummy"
-        
         self.screen = pg.display.set_mode(Const.WINDOW_SIZE)
         pg.display.set_caption(Const.WINDOW_CAPTION)
         self.background.fill(Const.BACKGROUND_COLOR)
